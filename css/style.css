@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  text-align: center;
+  color: #444;
+}
+h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 32px;
+  margin-bottom: 1em;
+}
+p {
+  margin-bottom: 1em;
+}
+header {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+/* header.is-visible {
+  opacity: 1;
+} */
+header h1 {
+  font-size: 4em;
+}
+section {
+  position: relative;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section:nth-child(odd) {
+  background: #efefef;
+}
+.container {
+  /* border: 1px solid green; */
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  padding: 40px;
+}
+header img {
+  margin-top: 2em;
+}
+section img {
+  margin-top: 4em;
+}
+
+/* 스크롤 애니메이션 요소 화면 표시전 세팅 */
+.inline-photo {
+  opacity: 0;
+  transform: translate(0%, -10%) scale(0.8);
+  transition: 2s 0.25s;
+}
+/* 화면에 표시될때 세팅 */
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: translate(0%, 0%) scale(1);
+}
+
+/* #main-header h1{
+  opacity: 0;
+  transform: translateX(-5em);
+  transition: 1s 0.5s;
+}
+#main-header h1.is-visible{
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+#buzz {
+  background-image: url("../images/cloud.jpg");
+  animation: cloud 10s linear infinite alternate forwards;
+}
+
+@keyframes cloud {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* page indicator */
+#page-indicator {
+  position: fixed;
+  /* border: 1px solid red; */
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+#page-indicator a {
+  display: block;
+  background: #ddd;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  text-indent: -9999px;
+}
+#page-indicator a.active {
+  background: #999;
+}

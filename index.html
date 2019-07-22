@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animating content on scroll</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/csslick_ani.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/db.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="container">
+        <h1 class="show-on-scroll">Toy Story Heros</h1>
+        <h2>Animation Content on scroll</h2>
+        <img
+          src="images/ts4.jpg"
+          alt="toystory"
+          class="inline-photo show-on-scroll"
+          height="40%"
+        />
+      </div>
+    </header>
+
+    <nav id="page-indicator">
+      <a href="#main-header" class="active">title</a>
+      <a href="#woody">woody</a>
+      <a href="#buzz">buzz</a>
+      <a href="#jessie">jessie</a>
+    </nav>
+
+    <section class="content" id="woody">
+      <div class="container">
+        <h2>Woody</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <img
+          class="inline-photo show-on-scroll"
+          src="http://placehold.it/800x600"
+          alt="woody"
+          height="50%"
+        />
+      </div>
+    </section>
+
+    <section class="content" id="buzz">
+      <div class="container">
+        <h2>Buzz</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <img
+          class="inline-photo show-on-scroll"
+          src="http://placehold.it/800x600"
+          alt="buzz"
+          height="50%"
+        />
+      </div>
+    </section>
+
+    <section class="content" id="jessie">
+      <div class="container">
+        <h2>Jessie</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <img
+          class="fade-slide-right show-on-scroll"
+          src="http://placehold.it/800x600"
+          alt="jessie"
+          height="50%"
+        />
+      </div>
+    </section>
+
+    <script src="js/show-on-scroll.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
